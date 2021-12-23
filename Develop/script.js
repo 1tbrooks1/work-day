@@ -13,6 +13,7 @@ $(document).ready(function(){
         console.log(time);
 
         // save value into localStorage.setItem
+        localStorage.setItem(time, task);
     })
     // immediate function to check for localStorage
 
