@@ -6,8 +6,8 @@ $(document).ready(function(){
         var task = $(this).siblings(".text").val();
         console.log(task);
         // get value of time in timeblock and assign to variable .parent
-        var time = $(this).parent().attr("id");
-        console.log(time);
+        var tim = $(this).parent().attr("id");
+        console.log(tim);
 
         // save value into localStorage.setItem
     })
