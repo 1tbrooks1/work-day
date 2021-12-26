@@ -2,10 +2,11 @@
 $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 $(document).ready(function(){
-    // listen for button clicks
+    // listen for button click
     $(".save-btn").on("click", function(){
        
         // get value of <textarea> and assign it to variable
+        // worked on this section with my tutor
         var task = $(this).siblings(".text").val();
         console.log(task);
         // get value of time in time block and assign to variable .parent
@@ -14,17 +15,20 @@ $(document).ready(function(){
 
         // save value into localStorage.setItem
         localStorage.setItem(time, task);
-
     })
 
     var blockColor = function() {
+        // sets variable for hour
         var blockTime = moment().hour()
         // console.log(blockTime);
 
+        // loops through time blocks
         $(".block").each(function() {
+            // turns time block into number to compare it to hour
             var currBlockTime = parseInt($(this).attr("id"));
             // console.log(currBlockTime);
 
+            // sets color of time blocks depending on current time 
             if (currBlockTime > blockTime) {
                 $(this).addClass("future");
             } else if (currBlockTime === blockTime) {
@@ -36,46 +40,18 @@ $(document).ready(function(){
     })
 };
 
-/*var refreshPage = function() {
+// grabs item from local storage if there is any present
+$(".text").each(function(){
+    var inputId = $(this).attr("id");
+    $(this).val(localStorage.getItem(inputId));
+});
 
-    $(".text").each(function() {
-
-            var currHour = $(this).text();
-            var currPlan = localStorage.getItem(currHour);
-    
-             console.log(this);
-            console.log(currHour);
-    
-            if(currPlan !== null) {
-                $(this).siblings(".text").val(currPlan);
-        }
-
-    });
-
-}*/
-
-$("#9 .text").val(localStorage.getItem("9"));
-$("#10 .text").val(localStorage.getItem("10"));
-$("#11 .text").val(localStorage.getItem("11"));
-$("#12 .text").val(localStorage.getItem("12"));
-$("#13 .text").val(localStorage.getItem("13"));
-$("#14 .text").val(localStorage.getItem("14"));
-$("#15 .text").val(localStorage.getItem("15"));
-$("#16 .text").val(localStorage.getItem("16"));
-$("#17 .text").val(localStorage.getItem("17"));
-
+// functions
 blockColor();
 refreshPage();
-
 
 })
 
 
-
-
-
-    // immediate function to check for localStorage
-
-    // a selector for each time block
 
 

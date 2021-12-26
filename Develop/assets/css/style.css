@@ -1,10 +1,10 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -21,11 +21,11 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-block {
   text-align: center;
   border-radius: 15px;
 }
@@ -33,7 +33,7 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 
 .hour {
@@ -57,23 +57,37 @@ textarea{
   color: white;
 }
 
-.saveBtn {
+.save-btn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #06aed5;
   color: white;
 }
 
-.saveBtn i:hover {
+.save-btn i:hover {
   font-size: 20px;
-  transition: all .3s ease-in-out;
-}
-
-.col-2 {
-  color:#000000;
-}
-
-.col-9 text {
+  transition: all 0.3s ease-in-out;
   color: #000000;
+}
+
+.col-2,
+.text {
+  color: #000000;
+  border: solid 2px;
+}
+
+textarea::placeholder {
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 20px;
+}
+
+.text {
+font-size: 20px;
+font-weight: bold;
 }
