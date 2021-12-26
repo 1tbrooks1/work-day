@@ -1,6 +1,7 @@
 // this displays the time at the top of the calendar with moment.js
 $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
+
 $(document).ready(function(){
     // listen for button click
     $(".save-btn").on("click", function(){
@@ -48,8 +49,6 @@ $(".text").each(function(){
 
 // functions
 blockColor();
-refreshPage();
-
 })
 
 
