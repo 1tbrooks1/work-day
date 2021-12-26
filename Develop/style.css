@@ -69,3 +69,11 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+.col-2 {
+  color:#000000;
+}
+
+.col-9 text {
+  color: #000000;
+}
